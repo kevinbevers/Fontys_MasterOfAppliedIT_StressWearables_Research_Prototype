@@ -35,10 +35,3 @@ The lowcode demo UI (Budibase) at: http://localhost:10000
 | password | supabase |
 
 Mage.AI requires no login in this prototype.
-
-# Fontys_MasterOfAppliedIT_StressWearables_Research_Prototype
-<<<<<<< HEAD
-=======
-# Fontys_MasterOfAppliedIT_StressWearables_Research_Prototype
-# Fontys_MasterOfAppliedIT_StressWearables_Research_Prototype
->>>>>>> 40422b9 (first commit)
