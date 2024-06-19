@@ -1,0 +1,94 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_loc: wesad/EDA.csv
+    file_source:
+      path: data_loaders/load_data_from_csv.py
+  downstream_blocks:
+  - seperate_time_interval
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_data_from_csv
+  retry_config: {}
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_data_from_csv
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - add_chunknumber
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: seperate_time+interval
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_data_from_csv
+  uuid: seperate_time_interval
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_wesad_to_db
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: add_chunknumber
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - seperate_time_interval
+  uuid: add_chunknumber
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_wesad_to_db
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - add_chunknumber
+  uuid: export_wesad_to_db
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-06-03 19:45:27.374612+00:00'
+data_integration: null
+description: wesad csv files to database.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: wesad_to_db
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: wesad_to_db
+variables_dir: /home/src/mage_data/etl-demo
+widgets: []

@@ -1,0 +1,1 @@
+{"user_id": "int64", "meal_transaction_id": "int64", "paid_at": "str", "restaurant_id": "int64", "cuisine": "str", "revenue": "int64", "ambience": "str", "rating": "int64", "award_winning_dishes": "int64", "number_of_reviews": "int64", "number_of_meals": "int64"}

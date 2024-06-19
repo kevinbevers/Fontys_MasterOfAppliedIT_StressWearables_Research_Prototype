@@ -1,0 +1,98 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_loc: mark_model/merged_data.csv
+    file_source:
+      path: data_loaders/load_data_from_csv.py
+  downstream_blocks:
+  - fill_in_missing_values
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_data_from_csv
+  retry_config: {}
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_data_from_csv
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: icy elm
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: icy_elm
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: transformers/fill_in_missing_values.py
+  downstream_blocks:
+  - exporttosupa_markmodel
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: fill_in_missing_values
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_data_from_csv
+  uuid: fill_in_missing_values
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_exporters/exporttosupa_markmodel.py
+    file_source:
+      path: data_exporters/exporttosupa_markmodel.py
+    table: raw_mark_csv
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: exporttosupa_markmodel
+  retry_config: {}
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - fill_in_missing_values
+  uuid: exporttosupa_markmodel
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-05-31 19:32:48.692994+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: simple_data_forward
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: simple_data_forward
+variables_dir: /home/src/mage_data/etl-demo
+widgets: []

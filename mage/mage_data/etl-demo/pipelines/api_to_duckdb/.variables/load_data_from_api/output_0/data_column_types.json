@@ -1,0 +1,1 @@
+{"user ID": "int64", "meal transaction ID": "int64", "paid at": "str", "restaurant ID": "int64", "cuisine": "str", "revenue": "int64", "ambience": "str", "rating": "int64", "award winning dishes": "int64", "number of reviews": "int64"}
