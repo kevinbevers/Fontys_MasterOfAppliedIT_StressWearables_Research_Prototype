@@ -20,7 +20,7 @@ def load_data_from_file(*args, **kwargs):
     """
     filepath = os.getcwd() + '/etl-demo/' + kwargs['configuration'].get('file_loc')
 
-    return pd.read_csv(filepath, header=None, names=['raw_eda'])
+    return pd.read_csv(filepath, header=None, names=[kwargs['configuration'].get('rowname')])
 
 
 @test

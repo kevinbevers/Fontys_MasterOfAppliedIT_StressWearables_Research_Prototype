@@ -3,21 +3,19 @@ blocks:
   color: null
   configuration:
     file_loc: mark_model/merged_data.csv
-    file_source:
-      path: data_loaders/load_data_from_csv.py
   downstream_blocks:
   - fill_in_missing_values
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: load_data_from_csv
+  name: load_local_file
   retry_config: {}
   status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
-  uuid: load_data_from_csv
+  uuid: load_local_file
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
@@ -50,7 +48,7 @@ blocks:
   timeout: null
   type: transformer
   upstream_blocks:
-  - load_data_from_csv
+  - load_local_file
   uuid: fill_in_missing_values
 - all_upstream_blocks_executed: true
   color: null

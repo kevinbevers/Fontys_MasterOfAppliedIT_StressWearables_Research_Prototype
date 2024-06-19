@@ -18,9 +18,9 @@ docker compose -f back_end_component.yml -f data_intake_component.yml -f lowcode
 ```
 
 ### Accessing the different parts
-The back-end (Supabase) at: http://localhost:8000
-The data intake / pipeline builder (Mage.AI) at: http://localhost:6789
-The lowcode demo UI (Budibase) at: http://localhost:10000
+* The back-end (Supabase) at: http://localhost:8000
+* The data intake / pipeline builder (Mage.AI) at: http://localhost:6789
+* The lowcode demo UI (Budibase) at: http://localhost:10000
 
 ### Login information for dashboards and components:
 
@@ -35,3 +35,8 @@ The lowcode demo UI (Budibase) at: http://localhost:10000
 | password | supabase |
 
 Mage.AI requires no login in this prototype.
+
+## Links to components
+* https://supabase.com/
+* https://www.mage.ai/
+* https://budibase.com/ !!Lowcode tool (demo only) React or other Javascript framework recommended when adding a UI!!

@@ -5,6 +5,7 @@ blocks:
     file_loc: wesad/EDA.csv
     file_source:
       path: data_loaders/load_data_from_csv.py
+    rowname: raw_eda
   downstream_blocks:
   - seperate_time_interval
   executor_config: null
@@ -35,7 +36,7 @@ blocks:
   upstream_blocks:
   - load_data_from_csv
   uuid: seperate_time_interval
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -52,7 +53,7 @@ blocks:
   upstream_blocks:
   - seperate_time_interval
   uuid: add_chunknumber
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks: []
